@@ -1,0 +1,15 @@
+{% extends 'engcards/main.html' %}
+{% block title %}Play{% endblock %}
+{% block content %}
+    <div class="align-middle center text-center mt-4 index-text">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.word }}<br>
+            {{ form.trans }}<br>
+            {{ form.wins.as_hidden }}<br>
+            {{ form.loses.as_hidden }}<br>
+            <span>{{ error }}</span>
+            <button type="submit" class="btn btn-outline-success">Success</button>
+        </form>
+    </div>
+{% endblock %}

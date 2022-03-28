@@ -1,0 +1,17 @@
+{% extends 'engcards/main.html' %}
+{% block title %}Play{% endblock %}
+{% block content %}
+    <div class="Play_content">
+        <h1 id="Word">{{ WordRandom }}</h1>
+        <hr>
+        <form method="POST">
+            {% csrf_token %}
+{#            {{ form.Answers }}<br>#}
+            <button type="submit" class="btn btn-outline-success" name=answer value="{{ WordRandom }},{{ answers.0 }}">{{ answers.0 }}</button>
+            <button type="submit" class="btn btn-outline-success" name=answer value="{{ WordRandom }},{{ answers.1 }}">{{ answers.1 }}</button>
+            <button type="submit" class="btn btn-outline-success" name=answer value="{{ WordRandom }},{{ answers.2 }}">{{ answers.2 }}</button>
+            <span>{{ error }}</span>
+            <h1 style="color: brown">{{ ERROR }}</h1>
+        </form>
+    </div>
+{% endblock %}
