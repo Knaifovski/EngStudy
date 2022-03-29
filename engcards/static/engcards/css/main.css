@@ -23,39 +23,6 @@
     margin-right: auto;
     width: 70%;
 }
-
-.sidebar {
-    height: 100vh;
-    background-color: #fff;
-    text-align: center;
-}
-
-.sidebar ul {
-    padding: 0.5em;
-}
-
-.sidebar li {
-    display: block;
-    margin-top: 0.2em;
-    text-decoration: none;
-    padding-left: 0.4em;
-}
-
-.sidebar li > a {
-    display: block;
-}
-
-.sidebar ul > li {
-    color: white;
-    font-size: 1.3em;
-    transition: transform .3s ease;
-}
-
-.sidebar li:hover {
-    color: #a268a1;
-    transform: scale(1.05);
-}
-
 body {
     height: 100vh;
     background-color: #e0e0e0;

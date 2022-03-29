@@ -2,14 +2,17 @@
 {% block title %}Play{% endblock %}
 {% block content %}
     <div class="Play_content">
+        <h2>{{counter}}</h2>
         <h1 id="Word">{{ WordRandom }}</h1>
         <hr>
         <form method="POST">
             {% csrf_token %}
 {#            {{ form.Answers }}<br>#}
+            <div class="row">
             {% for answer in answers %}
-                <button type="submit" class="btn btn-outline-success" name=answer value="{{ WordRandom }},{{ answer }}">{{ answer }}</button>
+                <button type="submit" class="col btn btn-outline-success" name=answer value="{{ WordRandom }},{{ answer }},{{counter}}">{{ answer }}</button>
             {%endfor%}
+                </div>
             <span>{{ error }}</span>
             <h1 style="color: brown">{{ ERROR }}</h1>
         </form>
