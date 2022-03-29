@@ -7,9 +7,9 @@
         <form method="POST">
             {% csrf_token %}
 {#            {{ form.Answers }}<br>#}
-            <button type="submit" class="btn btn-outline-success" name=answer value="{{ WordRandom }},{{ answers.0 }}">{{ answers.0 }}</button>
-            <button type="submit" class="btn btn-outline-success" name=answer value="{{ WordRandom }},{{ answers.1 }}">{{ answers.1 }}</button>
-            <button type="submit" class="btn btn-outline-success" name=answer value="{{ WordRandom }},{{ answers.2 }}">{{ answers.2 }}</button>
+            {% for answer in answers %}
+                <button type="submit" class="btn btn-outline-success" name=answer value="{{ WordRandom }},{{ answer }}">{{ answer }}</button>
+            {%endfor%}
             <span>{{ error }}</span>
             <h1 style="color: brown">{{ ERROR }}</h1>
         </form>
